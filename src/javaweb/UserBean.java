@@ -1,25 +1,26 @@
 package javaweb;
 
 public class UserBean {
-	private String Uemail;
-	private String Upass;
-	private String Uname;
-	public String getUemail() {
-		return Uemail;
+	private String email;
+	private String pass;
+	private String name;
+	public String getEmail() {
+		return email;
 	}
-	public void setUemail(String uemail) {
-		Uemail = uemail;
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	public String getUpass() {
-		return Upass;
+	public String getPass() {
+		return pass;
 	}
-	public void setUpass(String upass) {
-		Upass = upass;
+	public void setPass(String pass) {
+		this.pass = pass;
 	}
-	public String getUname() {
-		return Uname;
+	public String getName() {
+		return name;
 	}
-	public void setUname(String uname) {
-		Uname = uname;
+	public void setName(String name) {
+		this.name = name;
 	}
+	
 }

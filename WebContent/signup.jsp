@@ -13,16 +13,16 @@
 <table>
 <tr>
 <td>User Name : 
-<td> <input type="text" name="Uname" required autofocus>
+<td> <input type="text" name="name" required autofocus>
 </tr>
 
 <tr>
 <td>Email : 
-<td> <input type="email" name="Uemail" required>
+<td> <input type="email" name="email" required>
 </tr>
 <tr>
 <td>Password :
-<td><input type="password" name="Upass" required></tr>
+<td><input type="password" name="pass" required></tr>
 <tr>
 <td>Confirm Password :
 <td><input type="password" name="ConUpass" required></tr>
