@@ -9,7 +9,7 @@
 <body>
 <div align="center">
 <h1>JNet Wallet</h1>
-<form method="get" action="loginprocess.jsp">
+<form method="get" action="signupprocess.jsp">
 <table>
 <tr>
 <td>User Name : 
