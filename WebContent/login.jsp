@@ -11,7 +11,7 @@
 <h1>JNet Wallet</h1>
 <form method="get" action="loginprocess.jsp">
 <table>
-*
+
 <tr>
 <td>Email : 
 <td> <input type="email" name="email" required autofocus maxlength="30" placeholder="user@email.com">
