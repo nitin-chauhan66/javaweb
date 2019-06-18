@@ -5,7 +5,7 @@
 <jsp:setProperty property="*" name="obj"/>
 <% 
 int row =SignupDAO.validate(obj);
-	if(row>0){
+	if(row > 0){
 		out.println("Yau are Reggistered Successfully");
 	}
 	else{
