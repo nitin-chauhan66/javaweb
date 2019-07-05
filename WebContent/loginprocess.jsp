@@ -9,10 +9,18 @@
 boolean status = LoginDAO.validate(obj);
 
 	if(status){
-		out.println("You are Logged in successfully");
+		session.setAttribute("email", obj.getEmail());
+		response.sendRedirect("userprofile.jsp");
+		
 	}
 	else{
 		out.println("Email or password  Error!");
+		%>
+		<a href='index.jsp'><button>Try Again</button></a>
+		
+		
+		
+		<% 
 	}
 %>
   
