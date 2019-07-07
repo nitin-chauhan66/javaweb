@@ -13,7 +13,7 @@
 <div align="center">
 <%
 Connection con=DBconnect.getCon();
-PreparedStatement ps=con.prepareStatement("select * from transactions");
+PreparedStatement ps=con.prepareStatement("select * from transactions order by time desc");
 ResultSet rs=ps.executeQuery();%>
 <table border="1">
 <caption>Recent transactions</caption>
