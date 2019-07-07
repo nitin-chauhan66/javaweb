@@ -4,6 +4,7 @@
    <%@ page import ="javaweb.DBconnect" %>
    <%@ page import ="javaweb.*" %>
    <jsp:useBean id="obj" class="javaweb.UserBean" />
+   <%@include file="menu.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +31,7 @@ th {text-align: left;}
 <body>
 <div align="center">
 <%
-session.setAttribute("flag", true);
+if((boolean)session.getAttribute("flag")==true){
 String email = (String)session.getAttribute("email");
 Connection con=DBconnect.getCon();
 PreparedStatement ps=con.prepareStatement(  
@@ -61,7 +62,7 @@ while(rs.next()){%>
 
  ps=con.prepareStatement("select * from users");
  rs=ps.executeQuery(); %>
- <form action="transcation.jsp" name="f1" method="post">
+ <form action="transaction.jsp" name="f1" method="post">
  <h3>Select a User</h3>
 <table>
 <tr>
@@ -70,13 +71,14 @@ while(rs.next()){%>
 <th>Email </th>
 </tr>
 <%
-while(rs.next()){%>
+while(rs.next()){
+if(!email.equals(rs.getString(3))){%>
 <tr>
-	<td><input type="radio" name="email" value="<%=rs.getString(3) %>">
+	<td><input type="radio" name="email" value=<%=rs.getString(3)%>>
 <td><%=rs.getString(1)%>
 <td><%=rs.getString(3) %>
 </tr><% 
-
+}
 }
 %>
 </table>
@@ -85,6 +87,10 @@ Enter amount to Transfer :
 <input type="number"  name="amount" required min=1 step=1>
 <input type="Submit" value="Transfer">	
 </form>
+<%}
+else{
+	response.sendRedirect("login.jsp");
+}%>
 </div>
 </body>
 </html>

@@ -9,6 +9,7 @@
 boolean status = LoginDAO.validate(obj);
 
 	if(status){
+		session.setAttribute("flag", true);
 		session.setAttribute("email", obj.getEmail());
 		response.sendRedirect("userprofile.jsp");
 		
