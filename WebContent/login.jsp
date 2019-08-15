@@ -10,7 +10,7 @@
 <body>
 <div align="center">
 <h1>JNet Wallet</h1>
-<form method="get" action="loginprocess.jsp">
+<form method="post" action="loginprocess.jsp">
 <table>
 
 <tr>
@@ -21,11 +21,12 @@
 <td>Password :
 <td><input type="password" name="pass" required maxlength="30" placeholder="Enter Password"></tr>
 <tr>
-<td><button>Forgot Password</button>
+
 <td><input type="submit" value="Login"></tr>
 
 </table>
 </form>
+<a href="forgot.jsp"><button>Forgot Password</button></a>
 </div>
 </body>
 </html>
