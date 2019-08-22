@@ -25,7 +25,7 @@
 }
 </style>
 </head>
-<body>
+<body background="money.jpg">
 <div align="center">
 <h1>JNet Wallet</h1>
 
