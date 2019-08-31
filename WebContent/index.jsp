@@ -6,7 +6,7 @@
 <head>
 <style>
 .button {
-  background-color: #4b6482; /* Green */
+  background-color: Green; /* Green */
   border: none;
   color: white;
   padding: 15px 32px;

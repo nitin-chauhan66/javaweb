@@ -23,6 +23,7 @@ ul.topnav li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  text-transform:uppercase;
 }
 
 ul.topnav li a:hover:not(.active) {background-color: #111;}

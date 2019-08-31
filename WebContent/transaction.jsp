@@ -21,7 +21,7 @@ PreparedStatement ps=con.prepareStatement("select * from users where email =?");
 ps.setString(1, senderEmail);
 ResultSet rs=ps.executeQuery();
 while(rs.next()){
- cr =rs.getInt(4)-amount;
+ cr =rs.getInt(3)-amount;
 }
 if(cr>=0){
 	ps=con.prepareStatement("update users set  credits=? where email=? ");
@@ -32,7 +32,7 @@ if(cr>=0){
 	ps.setString(1, email);
 	rs=ps.executeQuery();
 	while(rs.next()){
-		tfamt=rs.getInt(4)+amount;
+		tfamt=rs.getInt(3)+amount;
 	}
 	ps=con.prepareStatement("update users set  credits=? where email=? ");
 	ps.setInt(1, tfamt);

@@ -51,8 +51,8 @@ ResultSet rs=ps.executeQuery();
 while(rs.next()){%>
 	<tr>
 	<td><%=rs.getString(1)%>
+	<td><%=rs.getString(2) %>
 	<td><%=rs.getString(3) %>
-	<td><%=rs.getString(4) %>
 	</tr><% 
 	
 }
@@ -72,11 +72,11 @@ while(rs.next()){%>
 </tr>
 <%
 while(rs.next()){
-if(!email.equals(rs.getString(3))){%>
+if(!email.equals(rs.getString(2))){%>
 <tr>
-	<td><input type="radio" name="email" value=<%=rs.getString(3)%>>
+	<td><input type="radio" name="email" value=<%=rs.getString(2)%>>
 <td><%=rs.getString(1)%>
-<td><%=rs.getString(3) %>
+<td><%=rs.getString(2) %>
 </tr><% 
 }
 }
