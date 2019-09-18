@@ -58,6 +58,7 @@ while(rs.next()){%>
 }
 %>
 </table>
+<div style="radius:50%;align:center"><a href="logout.jsp"><button>Logout</button></a></div>
 <%
 
  ps=con.prepareStatement("select * from users");
